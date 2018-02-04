@@ -31,18 +31,15 @@ def extract_emails():
             hsnum = 1
         email = (hs, hsnum, message, words_in_message)
         emails.append(email)
-        if len(emails) > 1000:
-            break
     return all_words_counter, emails
 
 
 def extract_features(all_words, emails):
-    most_common_words = all_words.most_common(1000)
+    most_common_words = all_words.most_common(3000)
     features_matrix = numpy.zeros([len(emails), len(most_common_words)], dtype=int)
     train_labels = numpy.zeros(len(emails), dtype=int)
     for emailId, email in enumerate(emails):
         for word in email[3]:
-            wordID = 0
             for index, dicWord in enumerate(most_common_words):
                 if dicWord[0] == word:
                     wordID = index
