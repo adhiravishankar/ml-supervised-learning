@@ -55,12 +55,12 @@ col22vals = {' Grandchild <18 never marr child of subfamily RP': 0, ' Child 18+ 
              ' Grandchild <18 never marr not in subfamily': 24, ' Other Rel <18 never marr not in subfamily': 25,
              ' Grandchild 18+ never marr RP of subfamily': 26, ' Grandchild 18+ ever marr RP of subfamily': 27,
              ' Other Rel <18 never married RP of subfamily': 28, ' Grandchild 18+ ever marr not in subfamily': 29,
-             ' Spouse of householder': 30, ' Other Rel <18 ever marr not in subfamily': 31,
-             ' Other Rel <18 ever marr RP of subfamily': 32, ' Grandchild <18 never marr RP of subfamily': 33,
-             ' RP of unrelated subfamily': 34, ' Spouse of RP of unrelated subfamily': 35, ' Householder': 36}
-col23vals = {' Other relative of householder': 0, ' Group Quarters- Secondary individual': 1, ' Spouse of householder': 2,
-             ' Child under 18 ever married': 3, ' Child under 18 never married': 4, ' Nonrelative of householder': 5,
-             ' Child 18 or older': 6, ' Householder': 7}
+             ' Spouse of householder': 36, ' Other Rel <18 ever marr not in subfamily': 30,
+             ' Other Rel <18 ever marr RP of subfamily': 31, ' Grandchild <18 never marr RP of subfamily': 32,
+             ' RP of unrelated subfamily': 33, ' Spouse of RP of unrelated subfamily': 34, ' Householder': 35,
+             ' Other relative of householder': 37, ' Group Quarters- Secondary individual': 38,
+             ' Child under 18 ever married': 40, ' Child under 18 never married': 41, ' Nonrelative of householder': 42,
+             ' Child 18 or older': 39}
 col25vals = {' MSA to MSA': 0, ' NonMSA to MSA': 1, ' Not identifiable': 2, ' MSA to nonMSA': 3, ' Abroad to MSA': 4,
              ' Abroad to nonMSA': 5, ' Nonmover': 6, ' NonMSA to nonMSA': 7}
 col26vals = {' Same county': 2, ' Different region': 3, ' Different division same region': 4, ' Different state same division': 8,
@@ -94,7 +94,6 @@ dataframe.replace(col19vals, inplace=True)
 dataframe.replace(col20vals, inplace=True)
 dataframe.replace(col21vals, inplace=True)
 dataframe.replace(col22vals, inplace=True)
-dataframe.replace(col23vals, inplace=True)
 dataframe.replace(col25vals, inplace=True)
 dataframe.replace(col26vals, inplace=True)
 dataframe.replace(col28vals, inplace=True)
