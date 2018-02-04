@@ -8,14 +8,14 @@ from nltk.corpus import stopwords
 from sklearn.model_selection import train_test_split
 
 
-def get_data():
-    all_words, emails = extract_emails()
-    features_matrix, train_labels = extract_features(all_words, emails)
-    numpy.save('email_features.npy', features_matrix)
-    numpy.save('email_labels.npy', train_labels)
+def get_data(test_size=0.4):
+    # all_words, emails = extract_emails()
+    # features_matrix, train_labels = extract_features(all_words, emails)
+    # numpy.save('email_features.npy', features_matrix)
+    # numpy.save('email_labels.npy', train_labels)
     features_matrix = numpy.load('email_features.npy')
     train_labels = numpy.load('email_labels.npy')
-    X_train, X_test, Y_train, Y_test = train_test_split(features_matrix, train_labels, test_size=0.4)
+    X_train, X_test, Y_train, Y_test = train_test_split(features_matrix, train_labels, test_size=test_size)
     return features_matrix, train_labels, X_train, X_test, Y_train, Y_test
 
 def extract_emails():
