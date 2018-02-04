@@ -12,16 +12,16 @@ col4vals = {' Doctorate degree(PhD EdD)': 0, ' Masters degree(MA MS MEng MEd MSW
 col6vals = {' High school': 1, ' College or university': 2}
 col7vals = {' Separated': 0, ' Married-A F spouse present': 1, ' Never married': 2, ' Married-spouse absent': 3,
             ' Married-civilian spouse present': 4, ' Divorced': 5, ' Widowed': 6}
-col8vals = {' Utilities and sanitary services': 0, ' Private household services': 1, ' Personal services except private HH': 2,
-            ' Construction': 3, ' Manufacturing-durable goods': 4, ' Education': 5, ' Forestry and fisheries': 7, ' Mining': 8,
-            ' Not in universe or children': 9, ' Social services': 10, ' Entertainment': 11, ' Manufacturing-nondurable goods': 12,
-            ' Transportation': 13, ' Agriculture': 14, ' Armed Forces': 15, ' Hospital services': 16, ' Medical except hospital': 17,
+col8vals = {' Business and repair services': 1, ' Communications': 2, ' Construction': 3, ' Manufacturing-durable goods': 4,
+            ' Education': 5, ' Forestry and fisheries': 7, ' Mining': 8, ' Not in universe or children': 9,
+            ' Social services': 10, ' Entertainment': 11, ' Manufacturing-nondurable goods': 12, ' Transportation': 13,
+            ' Agriculture': 14, ' Armed Forces': 22, ' Hospital services': 16, ' Medical except hospital': 17,
             ' Wholesale trade': 18, ' Retail trade': 19, ' Public administration': 20, ' Other professional services': 21,
-            ' Finance insurance and real estate': 22, ' Business and repair services': 23, ' Communications': 24}
-col9vals = {' Farming forestry and fishing': 2, ' Handlers equip cleaners etc ': 3, ' Technicians and related support': 4,
-            ' Machine operators assmblrs & inspctrs': 5, ' Executive admin and managerial': 6, ' Professional specialty': 7,
-            ' Precision production craft & repair': 8, ' Adm support including clerical': 9, ' Sales': 10,
-            ' Other service': 11, ' Protective services': 12, ' Transportation and material moving': 13}
+            ' Personal services except private HH': 22, ' Utilities and sanitary services': 23, ' Private household services': 24,
+            ' Farming forestry and fishing': 25, ' Handlers equip cleaners etc ': 26, ' Technicians and related support': 27,
+            ' Machine operators assmblrs & inspctrs': 28, ' Executive admin and managerial': 29, ' Professional specialty': 30,
+            ' Precision production craft & repair': 31, ' Adm support including clerical': 32, ' Sales': 33,
+            ' Other service': 34, ' Protective services': 35, ' Transportation and material moving': 36, ' Finance insurance and real estate': 37}
 col10vals = {' Other': 0, ' Amer Indian Aleut or Eskimo': 1, ' Black': 2, ' Asian or Pacific Islander': 3, ' White': 4}
 col11vals = {' Cuban': 0, ' Mexican-American': 1, ' Central or South American': 2, ' Other Spanish': 3, ' Chicano': 4,
              ' All other': 5, ' Puerto Rican': 6, ' NA': 7, ' Do not know': 8, ' Mexican (Mexicano)': 9}
@@ -84,7 +84,6 @@ dataframe.replace(col4vals, inplace=True)
 dataframe.replace(col6vals, inplace=True)
 dataframe.replace(col7vals, inplace=True)
 dataframe.replace(col8vals, inplace=True)
-dataframe.replace(col9vals, inplace=True)
 dataframe.replace(col10vals, inplace=True)
 dataframe.replace(col11vals, inplace=True)
 dataframe.replace(col12vals, inplace=True)
