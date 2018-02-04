@@ -49,20 +49,20 @@ def boost(x_train, x_test, y_train):
 
 
 def plot_learning_curves(X, Y):
-    #mplot1 = plot_learning_curve(DecisionTreeClassifier(), "Decision Tree", X, Y)
-    #mplot1.show()
+    mplot1 = plot_learning_curve(DecisionTreeClassifier(), "Decision Tree", X, Y)
+    mplot1.show()
 
-    #mplot2 = plot_learning_curve(GradientBoostingClassifier(), "Boosted Decision Tree", X, Y)
-    #mplot2.show()
+    mplot2 = plot_learning_curve(GradientBoostingClassifier(), "Boosted Decision Tree", X, Y)
+    mplot2.show()
 
-    #mplot3 = plot_learning_curve(LinearSVC(), "Linear SVC", X, Y)
-    #mplot3.show()
+    mplot3 = plot_learning_curve(LinearSVC(), "Linear SVC", X, Y)
+    mplot3.show()
 
-    #mplot4 = plot_learning_curve(MLPClassifier(), "Neural Network", X, Y)
-    #mplot4.show()
+    mplot4 = plot_learning_curve(MLPClassifier(), "Neural Network", X, Y)
+    mplot4.show()
 
-    # mplot5 = plot_learning_curve(KNeighborsClassifier(), "K-Nearest Neighbors (k=5)", X, Y)
-    # mplot5.show()
+    mplot5 = plot_learning_curve(KNeighborsClassifier(), "K-Nearest Neighbors (k=5)", X, Y)
+    mplot5.show()
 
     mplot6 = plot_learning_curve(KNeighborsClassifier(n_neighbors=3), "K-Nearest Neighbors (k=3)", X, Y)
     mplot6.show()
