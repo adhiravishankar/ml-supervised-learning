@@ -29,7 +29,7 @@ def extract_emails():
         hsnum = 0
         if hs == 'spam':
             hsnum = 1
-        email = (hs, hsnum, message, words_in_message)
+        email = (hs, hsnum, words_in_message)
         emails.append(email)
     return all_words_counter, emails
 

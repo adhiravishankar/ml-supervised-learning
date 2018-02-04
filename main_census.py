@@ -1,11 +1,17 @@
+from sklearn.ensemble import GradientBoostingClassifier
 from sklearn.metrics import confusion_matrix, accuracy_score
+from sklearn.neural_network import MLPClassifier
+from sklearn.svm import LinearSVC
+from sklearn.tree import DecisionTreeClassifier
 
-from classifiers import neural, decision, boost, linearsvc
+from classifiers import neural, decision, boost, linearsvc, plot_learning_curve, plot_learning_curves
 from preprocess_census import read_data
 
 print("Started pre-processing data")
-X_train, X_test, Y_train, Y_test = read_data()
+X, Y, X_train, X_test, Y_train, Y_test = read_data()
 print("Finished pre-processing data")
+
+plot_learning_curves(X, Y)
 
 results3 = decision(X_train, X_test, Y_train)
 print("Decision: ", confusion_matrix(Y_test, results3))
