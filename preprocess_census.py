@@ -32,15 +32,15 @@ col15vals = {' Unemployed full-time': 0, ' Children or Armed Forces': 1, ' PT fo
              ' Full-time schedules': 6, ' PT for econ reasons usually FT': 7}
 col19vals = {' Joint one under 65 & one 65+': 0, ' Single': 1, ' Joint both 65+': 2, ' Head of household': 3,
              ' Joint both under 65': 4, ' Nonfiler': 5}
-col20vals = {' Abroad': 1, ' West': 2, ' Midwest': 3, ' South': 4, ' Northeast': 5}
-col21vals = {' North Dakota': 1, ' Colorado': 2, ' Oregon': 3, ' South Carolina': 4, ' Kentucky': 5, ' Missouri': 6,
+col20vals = {' Abroad': 1, ' West': 2, ' Midwest': 3, ' South': 4, ' Northeast': 5, 'Missouri': 6,
              ' New Jersey': 7, ' Texas': 8, ' Mississippi': 9, ' Arkansas': 10, ' District of Columbia': 11, ' Florida': 12,
              ' Kansas': 13, ' California': 14, ' Idaho': 15, ' Ohio': 16, ' Maine': 17, ' Oklahoma': 18, ' Alabama': 19,
              ' Louisiana': 20, ' New Hampshire': 21, ' Wisconsin': 22, ' Georgia': 23, ' Iowa': 24, ' West Virginia': 25,
-             ' Delaware': 26, ' Vermont': 27, ' Abroad': 28, ' Michigan': 29, ' Nebraska': 30, ' New York': 31,
+             ' Delaware': 26, ' Vermont': 27, ' Michigan': 29, ' Nebraska': 30, ' New York': 31,
              ' Illinois': 32, ' Arizona': 33, ' Wyoming': 34, ' North Carolina': 35, ' Indiana': 36, ' Minnesota': 37,
              ' Alaska': 38, ' Montana': 39, ' Virginia': 40, ' Utah': 41, ' Connecticut': 42, ' South Dakota': 43,
-             ' Pennsylvania': 44, ' Tennessee': 45, ' New Mexico': 46, ' Massachusetts': 47, ' Maryland': 48, ' Nevada': 49}
+             ' Pennsylvania': 44, ' Tennessee': 45, ' New Mexico': 46, ' Massachusetts': 47, ' Maryland': 48, ' Nevada': 49,
+             ' North Dakota': 50, ' Colorado': 51, ' Oregon': 52, ' South Carolina': 53, ' Kentucky': 54}
 col22vals = {' Grandchild <18 never marr child of subfamily RP': 0, ' Child 18+ spouse of subfamily RP': 1,
              ' Child 18+ ever marr RP of subfamily': 2, ' Grandchild 18+ never marr not in subfamily': 3,
              ' Other Rel <18 never marr child of subfamily RP': 4, ' Child 18+ never marr Not in a subfamily': 5,
@@ -92,7 +92,6 @@ dataframe.replace(col14vals, inplace=True)
 dataframe.replace(col15vals, inplace=True)
 dataframe.replace(col19vals, inplace=True)
 dataframe.replace(col20vals, inplace=True)
-dataframe.replace(col21vals, inplace=True)
 dataframe.replace(col22vals, inplace=True)
 dataframe.replace(col25vals, inplace=True)
 dataframe.replace(col26vals, inplace=True)
