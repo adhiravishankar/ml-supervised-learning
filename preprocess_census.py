@@ -63,11 +63,10 @@ col23vals = {' Other relative of householder': 0, ' Group Quarters- Secondary in
              ' Child 18 or older': 6, ' Householder': 7}
 col25vals = {' MSA to MSA': 0, ' NonMSA to MSA': 1, ' Not identifiable': 2, ' MSA to nonMSA': 3, ' Abroad to MSA': 4,
              ' Abroad to nonMSA': 5, ' Nonmover': 6, ' NonMSA to nonMSA': 7}
-col26vals = {' Same county': 2, ' Different region': 3, ' Different division same region': 4, ' Different state same division': 5,
-             ' Different county same state': 6, ' Nonmover': 7}
-col27vals = {' Different state in South': 2, ' Same county': 3, ' Different state in Northeast': 4, ' Different county same state': 5,
-             ' Different state in Midwest': 6, ' Nonmover': 7, ' Different state in West': 8}
-col28vals = {' Not in universe under 1 year old': 20, ' No': 21, ' Yes': 22}
+col26vals = {' Same county': 2, ' Different region': 3, ' Different division same region': 4, ' Different state same division': 8,
+             ' Nonmover': 7, ' Different state in South': 10, ' Different state in Northeast': 6,
+             ' Different county same state': 5, ' Different state in Midwest': 9, ' Different state in West': 8}
+col28vals = {' Not in universe under 1 year old': 0, ' No': 1, ' Yes': 2}
 col31vals = {' Mother only present': 1, ' Father only present': 2, ' Neither parent present': 3, ' Both parents present': 4}
 col32vals = {' El-Salvador': 23, ' Outlying-U S (Guam USVI etc)': 1, ' Portugal': 2, ' Trinadad&Tobago': 3, ' Vietnam': 4,
              ' Thailand': 5, ' Ecuador': 6, ' Poland': 7, ' Columbia': 8, ' Yugoslavia': 9, ' Laos': 10, ' Canada': 11,
@@ -98,8 +97,7 @@ dataframe.replace(col22vals, inplace=True)
 dataframe.replace(col23vals, inplace=True)
 dataframe.replace(col25vals, inplace=True)
 dataframe.replace(col26vals, inplace=True)
-dataframe.replace(col27vals, inplace=True)
-# dataframe.replace(col28vals, inplace=True)
+dataframe.replace(col28vals, inplace=True)
 dataframe.replace(col31vals, inplace=True)
 dataframe.replace(col32vals, inplace=True)
 dataframe.replace(col35vals, inplace=True)
