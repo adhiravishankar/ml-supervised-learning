@@ -63,3 +63,5 @@ target/
 05.txt
 06.7z
 census-income.data.csv
+email_features.npy
+email_labels.npy
