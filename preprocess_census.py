@@ -9,7 +9,7 @@ def read_data():
     # numpy.save('census_labels.npy', training_labels)
     features_matrix = numpy.load('census_features.npy')
     training_labels = numpy.load('census_labels.npy')
-    X_train, X_test, Y_train, Y_test = train_test_split(features_matrix, training_labels, test_size=0.4)
+    X_train, X_test, Y_train, Y_test = train_test_split(features_matrix, training_labels, test_size=0.5)
     return features_matrix, training_labels, X_train, X_test, Y_train, Y_test
 
 

@@ -61,8 +61,8 @@ def plot_learning_curves(X, Y):
     #mplot4 = plot_learning_curve(MLPClassifier(), "Neural Network", X, Y)
     #mplot4.show()
 
-    mplot5 = plot_learning_curve(KNeighborsClassifier(), "K-Nearest Neighbors (k=5)", X, Y)
-    mplot5.show()
+    # mplot5 = plot_learning_curve(KNeighborsClassifier(), "K-Nearest Neighbors (k=5)", X, Y)
+    # mplot5.show()
 
     mplot6 = plot_learning_curve(KNeighborsClassifier(n_neighbors=3), "K-Nearest Neighbors (k=3)", X, Y)
     mplot6.show()
@@ -112,8 +112,7 @@ def plot_learning_curve(estimator, title, X, y, ylim=None, cv=None, n_jobs=1, tr
     test_scores_std = numpy.std(test_scores, axis=1)
     mplot.grid()
 
-    mplot.fill_between(train_sizes, train_scores_mean - train_scores_std, train_scores_mean + train_scores_std, alpha=0.1,
-                     color="r")
+    mplot.fill_between(train_sizes, train_scores_mean - train_scores_std, train_scores_mean + train_scores_std, alpha=0.1, color="r")
     mplot.fill_between(train_sizes, test_scores_mean - test_scores_std, test_scores_mean + test_scores_std, alpha=0.1, color="g")
     mplot.plot(train_sizes, train_scores_mean, 'o-', color="r", label="Training score")
     mplot.plot(train_sizes, test_scores_mean, 'o-', color="g", label="Cross-validation score")
