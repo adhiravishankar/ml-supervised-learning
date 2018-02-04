@@ -2,7 +2,7 @@ import numpy
 import matplotlib.pyplot as mplot
 from sklearn.ensemble import GradientBoostingClassifier
 from sklearn.model_selection import learning_curve
-from sklearn.neighbors import NearestNeighbors
+from sklearn.neighbors import NearestNeighbors, KNeighborsClassifier
 from sklearn.neural_network import MLPClassifier
 from sklearn.svm import LinearSVC, SVC
 from sklearn.tree import DecisionTreeClassifier
@@ -29,10 +29,10 @@ def neural(x_train, x_test, y_train):
     return model.predict(x_test)
 
 
-def knn(x_train, x_test, y_train, neighbors):
-    model = NearestNeighbors(n_neighbors=neighbors, metric='ball_tree')
+def knn(x_train, x_test, y_train, neighbors=5):
+    model = KNeighborsClassifier(n_neighbors=neighbors)
     model.fit(x_train, y_train)
-    results = model.kneighbors(x_test)
+    return model.predict(x_test)
 
 
 def decision(x_train, x_test, y_train):
@@ -58,8 +58,14 @@ def plot_learning_curves(X, Y):
     #mplot3 = plot_learning_curve(LinearSVC(), "Linear SVC", X, Y)
     #mplot3.show()
 
-    mplot4 = plot_learning_curve(MLPClassifier(), "Neural Network", X, Y)
-    mplot4.show()
+    #mplot4 = plot_learning_curve(MLPClassifier(), "Neural Network", X, Y)
+    #mplot4.show()
+
+    mplot5 = plot_learning_curve(KNeighborsClassifier(), "K-Nearest Neighbors (k=5)", X, Y)
+    mplot5.show()
+
+    mplot6 = plot_learning_curve(KNeighborsClassifier(n_neighbors=3), "K-Nearest Neighbors (k=3)", X, Y)
+    mplot6.show()
 
 
 def plot_learning_curve(estimator, title, X, y, ylim=None, cv=None, n_jobs=1, train_sizes=numpy.linspace(.1, 1.0, 5)):
