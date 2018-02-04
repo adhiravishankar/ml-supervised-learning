@@ -1,10 +1,8 @@
 from sklearn.metrics import confusion_matrix, accuracy_score
 from classifiers import neural, decision, boost, linearsvc
-from preprocess_email import extract_emails, extract_features
+from preprocess_email import extract_emails, extract_features, get_data
 
-
-all_words, emails = extract_emails()
-X_train, X_test, Y_train, Y_test = extract_features(all_words, emails)
+X, Y, X_train, X_test, Y_train, Y_test = get_data()
 
 results1 = linearsvc(X_train, X_test, Y_train)
 results2 = neural(X_train, X_test, Y_train)

@@ -8,6 +8,16 @@ from nltk.corpus import stopwords
 from sklearn.model_selection import train_test_split
 
 
+def get_data():
+    all_words, emails = extract_emails()
+    features_matrix, train_labels = extract_features(all_words, emails)
+    numpy.save('email_features.npy', features_matrix)
+    numpy.save('email_labels.npy', train_labels)
+    features_matrix = numpy.load('email_features.npy')
+    train_labels = numpy.load('email_labels.npy')
+    X_train, X_test, Y_train, Y_test = train_test_split(features_matrix, train_labels, test_size=0.4)
+    return features_matrix, train_labels, X_train, X_test, Y_train, Y_test
+
 def extract_emails():
     nltk.download('stopwords')
     stopWords = set(stopwords.words('english'))
@@ -31,18 +41,21 @@ def extract_emails():
             hsnum = 1
         email = (hs, hsnum, words_in_message)
         emails.append(email)
-    return all_words_counter, emails
+        if len(emails) % 1000 == 0:
+            print("Processed ", len(emails))
+    fivet_common_words = [a for a, b in all_words_counter.most_common(5000)]
+    return fivet_common_words, emails
 
 
 def extract_features(all_words, emails):
-    most_common_words = all_words.most_common(3000)
-    features_matrix = numpy.zeros([len(emails), len(most_common_words)], dtype=int)
+    features_matrix = numpy.zeros([len(emails), len(all_words)], dtype=int)
     train_labels = numpy.zeros(len(emails), dtype=int)
     for emailId, email in enumerate(emails):
-        for word in email[3]:
-            for index, dicWord in enumerate(most_common_words):
-                if dicWord[0] == word:
-                    wordID = index
-                    features_matrix[emailId, wordID] = email[3].count(word)
+        for word in set(email[2]):
+            if word in all_words:
+                wordID = all_words.index(word)
+                features_matrix[emailId, wordID] = email[2].count(word)
         train_labels[emailId] = email[1]
-    return train_test_split(features_matrix, train_labels, test_size=0.4)
+        if emailId % 1000 == 0:
+            print("Extracted from ", emailId)
+    return features_matrix, train_labels
