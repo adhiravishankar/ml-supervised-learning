@@ -11,7 +11,7 @@ print("Started pre-processing data")
 X, Y, X_train, X_test, Y_train, Y_test = read_data()
 print("Finished pre-processing data")
 
-plot_learning_curves(X, Y)
+# plot_learning_curves(X, Y)
 
 # results3 = decision(X_train, X_test, Y_train)
 # print("Decision: ", confusion_matrix(Y_test, results3))
