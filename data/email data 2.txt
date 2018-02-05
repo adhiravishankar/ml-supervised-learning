@@ -1,0 +1,35 @@
+0.4 email
+
+
+Started Linear SVM
+Started Neural Network
+Started Decision Tree
+SVM:  [[4487  702]
+ [  44 9896]]
+Neural:  [[4539  650]
+ [  32 9908]]
+Decision:  [[4407  782]
+ [  58 9882]]
+Boost:  [[4311  878]
+ [  63 9877]]
+KNN (k=3):  [[3892 1297]
+ [ 272 9668]]
+KNN (k=5):  [[3714 1475]
+ [ 270 9670]]
+Accuracy of SVM:  0.9506907264194593
+Accuracy of Neural:  0.9549210126247604
+Accuracy of Decision:  0.9444774935554233
+Accuracy of Boost:  0.9378015731376826
+Accuracy of KNN (k=3):  [[3892 1297]
+ [ 272 9668]]
+Accuracy of KNN (k=5):  [[3714 1475]
+ [ 270 9670]]
+Time for SVM:  1.6022369861602783  s
+Time for Neural:  139.1093463897705  s
+Time for Decision:  25.44966173171997  s
+Time for Boost:  506.89287304878235  s
+Time for KNN (k=3):  1618.4724605083466  s
+Time for KNN (k=5):  1611.326631307602  s
+
+
+

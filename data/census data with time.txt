@@ -1,0 +1,31 @@
+time census 
+
+Started pre-processing data
+Finished pre-processing data
+Started Linear SVM
+SVM:  [[90961  2660]
+ [ 3808  2333]]
+Accuracy of SVM:  0.9351656943525591
+Time for SVM:  30.455029249191284  s
+Started Neural Network
+Neural:  [[84642  8979]
+ [ 2616  3525]]
+Accuracy of Neural:  0.8837733806459374
+Time for Neural:  6.478253602981567  s
+Started Decision Tree
+Decision:  [[89904  3717]
+ [ 3310  2831]]
+Accuracy of Decision:  0.929562358413023
+Time for Decision:  1.065835952758789  s
+Boost:  [[92750   871]
+ [ 3597  2544]]
+Accuracy of Boost:  0.9552134079108278
+Time for Boost:  27.818994760513306  s
+KNN (k=3):  [[91667  1954]
+ [ 4277  1864]]
+Accuracy of KNN (k=3):  0.9375413484092139
+Time for KNN (k=3):  120.16662049293518  s
+KNN (k=5):  [[92220  1401]
+ [ 4452  1689]]
+Accuracy of KNN (k=5):  0.9413303662717267
+Time for KNN (k=5):  118.83772826194763  s
