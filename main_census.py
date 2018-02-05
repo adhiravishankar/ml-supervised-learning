@@ -1,3 +1,4 @@
+import time
 from sklearn.ensemble import GradientBoostingClassifier
 from sklearn.metrics import confusion_matrix, accuracy_score
 from sklearn.neural_network import MLPClassifier
@@ -13,30 +14,48 @@ print("Finished pre-processing data")
 
 # plot_learning_curves(X, Y)
 
-# results3 = decision(X_train, X_test, Y_train)
-# print("Decision: ", confusion_matrix(Y_test, results3))
-# print("Accuracy of Decision: ", accuracy_score(Y_test, results3))
+svc_start = time.time()
+results1 = linearsvc(X_train, X_test, Y_train)
+svc_end = time.time()
+print("SVM: ", confusion_matrix(Y_test, results1))
+print("Accuracy of SVM: ", accuracy_score(Y_test, results1))
+print("Time for SVM: ", (svc_end - svc_start), " s")
 
-#results4 = boost(X_train, X_test, Y_train)
-#print("Boost: ", confusion_matrix(Y_test, results4))
-#print("Accuracy of Boost: ", accuracy_score(Y_test, results4))
+neural_start = time.time()
+results2 = neural(X_train, X_test, Y_train)
+neural_stop = time.time()
+print("Neural: ", confusion_matrix(Y_test, results2))
+print("Accuracy of Neural: ", accuracy_score(Y_test, results2))
+print("Time for Neural: ", (neural_stop - neural_start), " s")
 
-#results5 = linearsvc(X_train, X_test, Y_train)
-#print("Linear SVM: ", confusion_matrix(Y_test, results5))
-#print("Accuracy of Linear SVM: ", accuracy_score(Y_test, results5))
+decision_start = time.time()
+results3 = decision(X_train, X_test, Y_train)
+decision_end = time.time()
+print("Decision: ", confusion_matrix(Y_test, results3))
+print("Accuracy of Decision: ", accuracy_score(Y_test, results3))
+print("Time for Decision: ", (decision_end - decision_start), " s")
 
-# results1 = svm(X_train, X_test, Y_train)
-# print("SVM: ", confusion_matrix(Y_test, results1))
-# print("Accuracy of SVM: ", accuracy_score(Y_test, results1))
+boost_start = time.time()
+results4 = boost(X_train, X_test, Y_train)
+boost_end = time.time()
+print("Boost: ", confusion_matrix(Y_test, results4))
+print("Accuracy of Boost: ", accuracy_score(Y_test, results4))
+print("Time for Boost: ", (boost_end - boost_start), " s")
 
-#results2 = neural(X_train, X_test, Y_train)
-#print("Neural: ", confusion_matrix(Y_test, results2))
-#print("Accuracy of Neural: ", accuracy_score(Y_test, results2))
+knn_start = time.time()
+results5 = knn(X_train, X_test, Y_train, 3)
+knn_end = time.time()
+print("KNN (k=3): ", confusion_matrix(Y_test, results5))
+print("Accuracy of KNN (k=3): ", accuracy_score(Y_test, results5))
+print("Time for KNN (k=3): ", (knn_end - knn_start), " s")
 
-# results6 = knn(X_train, X_test, Y_train)
-# print("KNN (k=5): ", confusion_matrix(Y_test, results6))
-# print("Accuracy of KNN (k=5): ", accuracy_score(Y_test, results6))
+knn5_start = time.time()
+results6 = knn(X_train, X_test, Y_train)
+knn5_end = time.time()
+print("KNN (k=5): ", confusion_matrix(Y_test, results6))
+print("Accuracy of KNN (k=5): ", accuracy_score(Y_test, results6))
+print("Time for KNN (k=5): ", (knn5_end - knn5_start), " s")
 
-# results7 = knn(X_train, X_test, Y_train, 3)
-# print("KNN (k=3): ", confusion_matrix(Y_test, results7))
-# print("Accuracy of KNN (k=3): ", accuracy_score(Y_test, results7))
+
+
+

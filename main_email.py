@@ -3,9 +3,9 @@ from sklearn.metrics import confusion_matrix, accuracy_score
 from classifiers import neural, decision, boost, linearsvc, knn, plot_learning_curves
 from preprocess_email import get_data
 
-X, Y, X_train, X_test, Y_train, Y_test = get_data()
+X, Y, X_train, X_test, Y_train, Y_test = get_data(0.2)
 
-plot_learning_curves(X, Y)
+# plot_learning_curves(X, Y)
 
 svc_start = time.time()
 results1 = linearsvc(X_train, X_test, Y_train)
@@ -39,12 +39,12 @@ knn_start = time.time()
 results5 = knn(X_train, X_test, Y_train, 3)
 knn_end = time.time()
 print("KNN (k=3): ", confusion_matrix(Y_test, results5))
-print("Accuracy of KNN (k=3): ", confusion_matrix(Y_test, results5))
+print("Accuracy of KNN (k=3): ", accuracy_score(Y_test, results5))
 print("Time for KNN (k=3): ", (knn_end - knn_start), " s")
 
 knn5_start = time.time()
 results6 = knn(X_train, X_test, Y_train)
 knn5_end = time.time()
 print("KNN (k=5): ", confusion_matrix(Y_test, results6))
-print("Accuracy of KNN (k=5): ", confusion_matrix(Y_test, results6))
+print("Accuracy of KNN (k=5): ", accuracy_score(Y_test, results6))
 print("Time for KNN (k=5): ", (knn5_end - knn5_start), " s")

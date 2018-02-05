@@ -1,0 +1,109 @@
+Census data
+
+40%
+
+Started pre-processing data
+Finished pre-processing data
+Started Decision Tree
+Decision:  [[71806  3058]
+ [ 2620  2326]]
+Accuracy of Decision:  0.9288560330785616
+Boost:  [[74102   762]
+ [ 2858  2088]]
+Accuracy of Boost:  0.9546422754040848
+Started Linear SVM
+Linear SVM:  [[74862     2]
+ [ 4895    51]]
+Accuracy of Linear SVM:  0.9386417742137577
+Started Neural Network
+Neural:  [[72532  2332]
+ [ 3083  1863]]
+Accuracy of Neural:  0.932151359478762
+KNN (k=5):  [[73750  1136]
+ [ 3521  1403]]
+Accuracy of KNN (k=5):  0.9416489161759178
+KNN (k=3):  [[73264  1622]
+ [ 3387  1537]]
+Accuracy of KNN (k=3):  0.937238441298083
+
+50%
+
+Started pre-processing data
+Finished pre-processing data
+Started Decision Tree
+Decision:  [[89844  3766]
+ [ 3224  2928]]
+Accuracy of Decision:  0.929933241113851
+Boost:  [[92708   902]
+ [ 3501  2651]]
+Accuracy of Boost:  0.9558649586014715
+Started Linear SVM
+Linear SVM:  [[92682   928]
+ [ 4893  1259]]
+Accuracy of Linear SVM:  0.941651129688659
+Started Neural Network
+Neural:  [[86619  6991]
+ [ 2384  3768]]
+Accuracy of Neural:  0.9060263426956155
+KNN (k=5):  [[92127  1408]
+ [ 4515  1712]]
+Accuracy of KNN (k=5):  0.9406286962971873
+KNN (k=3):  [[91536  1999]
+ [ 4331  1896]]
+Accuracy of KNN (k=3):  0.9365489865880796
+
+
+0.2
+
+import sys; print('Python %s on %s' % (sys.version, sys.platform))
+sys.path.extend(['C:\\Users\\adhir\\PycharmProjects\\SupervisedLearning', 'C:/Users/adhir/PycharmProjects/SupervisedLearning'])
+Started pre-processing data
+Finished pre-processing data
+Started Decision Tree
+Decision:  [[35933  1487]
+ [ 1275  1210]]
+Accuracy of Decision:  0.9307856158376143
+Boost:  [[37043   377]
+ [ 1415  1070]]
+Accuracy of Boost:  0.9550933466984087
+Started Linear SVM
+Linear SVM:  [[37335    85]
+ [ 2329   156]]
+Accuracy of Linear SVM:  0.9395063275278787
+Started Neural Network
+Neural:  [[36547   873]
+ [ 1539   946]]
+Accuracy of Neural:  0.9395564465605813
+KNN (k=5):  [[36923   533]
+ [ 1749   700]]
+Accuracy of KNN (k=5):  0.9428141836862548
+KNN (k=3):  [[36649   807]
+ [ 1688   761]]
+Accuracy of KNN (k=3):  0.9374765067034206
+
+
+0.3
+
+Started pre-processing data
+Finished pre-processing data
+Started Decision Tree
+Decision:  [[54040  2158]
+ [ 1917  1742]]
+Accuracy of Decision:  0.9319210785705933
+Boost:  [[55690   508]
+ [ 2110  1549]]
+Accuracy of Boost:  0.9562624254473161
+Started Linear SVM
+Linear SVM:  [[54171  2027]
+ [ 3147   512]]
+Accuracy of Linear SVM:  0.9135606528893864
+Started Neural Network
+Neural:  [[53891  2307]
+ [ 1677  1982]]
+Accuracy of Neural:  0.9334413685951518
+KNN (k=5):  [[55313   910]
+ [ 2597  1037]]
+Accuracy of KNN (k=5):  0.9414103613612443
+KNN (k=3):  [[54905  1318]
+ [ 2472  1162]]
+Accuracy of KNN (k=3):  0.9366824264497051

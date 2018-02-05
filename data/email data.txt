@@ -1,0 +1,65 @@
+0.5 email
+
+Started Linear SVM
+SVM:  [[ 5545   893]
+ [   51 12422]]
+Accuracy of SVM:  0.9500819628787478
+Time for SVM:  2.3011844158172607  s
+Started Neural Network
+Neural:  [[ 5600   838]
+ [   43 12430]]
+Accuracy of Neural:  0.9534133573052721
+Time for Neural:  86.30996751785278  s
+Started Decision Tree
+Decision:  [[ 5433  1005]
+ [   92 12381]]
+Accuracy of Decision:  0.941991433557189
+Time for Decision:  38.64780354499817  s
+Boost:  [[ 5298  1140]
+ [   75 12398]]
+Accuracy of Boost:  0.9357516789170324
+Time for Boost:  537.9035749435425  s
+KNN (k=3):  [[ 4590  1848]
+ [  109 12364]]
+Accuracy of KNN (k=3):  [[ 4590  1848]
+ [  109 12364]]
+Time for KNN (k=3):  2484.6473076343536  s
+KNN (k=5):  [[ 4370  2068]
+ [   97 12376]]
+Accuracy of KNN (k=5):  [[ 4370  2068]
+ [   97 12376]]
+Time for KNN (k=5):  2411.5915529727936  s
+
+
+0.3 email 
+
+Started Linear SVM
+SVM:  [[3284  517]
+ [  30 7516]]
+Accuracy of SVM:  0.9517934255750419
+Time for SVM:  2.7442638874053955  s
+Started Neural Network
+Neural:  [[3325  476]
+ [  26 7520]]
+Accuracy of Neural:  0.9557592315149379
+Time for Neural:  148.78824019432068  s
+Started Decision Tree
+Decision:  [[3211  590]
+ [  32 7514]]
+Accuracy of Decision:  0.9451837490085485
+Time for Decision:  50.438904762268066  s
+Boost:  [[3143  658]
+ [  47 7499]]
+Accuracy of Boost:  0.9378690402749625
+Time for Boost:  754.5132834911346  s
+KNN (k=3):  [[2774 1027]
+ [  46 7500]]
+Accuracy of KNN (k=3):  [[2774 1027]
+ [  46 7500]]
+Time for KNN (k=3):  1794.4256234169006  s
+KNN (k=5):  [[2688 1113]
+ [  49 7497]]
+Accuracy of KNN (k=5):  [[2688 1113]
+ [  49 7497]]
+Time for KNN (k=5):  1836.3677158355713  s
+
